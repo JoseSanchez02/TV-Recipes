@@ -34,7 +34,13 @@ logs/
 tmp/
 temp/
 
-# Documentation innecesaria (mantener solo README.md)
+# Videos (archivos grandes)
+*.mp4
+*.mov
+*.avi
+*.webm
+
+# Documentation files (keep only README.md and QUICKSTART.md)
 ACTUALIZACION_IMAGENES.md
 FIX_ENCHILADAS_IMAGE.md
 IMPLEMENTACION_COMPLETA.md
@@ -42,11 +48,11 @@ NUEVAS_RECETAS_AGREGADAS.md
 SPATIAL_NAVIGATION_IMPLEMENTATION.md
 CORRECCIONES_DISENO.md
 PROJECT_SUMMARY.txt
-
-# Videos
-*.mp4
-*.mov
-*.avi
+ALL_VIDEOS_IMPLEMENTED.md
+TRANSLATION_COMPLETE.md
+VIDEO_FEATURE.md
+VIDEO_MEJORAS.md
+public/README_IMAGES.md
 
 # Test files (opcional, descomenta si no quieres subirlos)
 # test_images.html

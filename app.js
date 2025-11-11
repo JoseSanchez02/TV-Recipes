@@ -7,186 +7,194 @@
 const recipes = [
     {
         id: 1,
-        name: "Enchiladas Suizas",
+        name: "Swiss Enchiladas",
         image: "public/enchiladas-suizas-receta-sanborns.webp",
+        video: "public/Enchiladas Suizas. La Receta Secreta.webm",
         ingredients: [
-            "12 tortillas de maíz",
-            "500g de pollo cocido y desmenuzado",
-            "400g de crema ácida",
-            "300g de queso manchego rallado",
-            "2 chiles poblanos asados",
-            "1 cebolla blanca picada"
+            "12 corn tortillas",
+            "500g cooked and shredded chicken",
+            "400g sour cream",
+            "300g grated Manchego cheese",
+            "2 roasted poblano peppers",
+            "1 white onion, chopped"
         ],
         steps: [
-            "Precalienta el horno a 180°C. Engrasa un refractario grande.",
-            "Sofríe la cebolla hasta que esté transparente. Agrega el pollo desmenuzado.",
-            "Mezcla la crema con los chiles poblanos licuados para hacer la salsa verde.",
-            "Pasa las tortillas por aceite caliente para suavizarlas sin dorarlas.",
-            "Rellena cada tortilla con pollo, enróllalas y colócalas en el refractario.",
-            "Cubre con la salsa de crema y espolvorea abundante queso rallado.",
-            "Hornea durante 25-30 minutos hasta que el queso esté dorado y burbujeante.",
-            "Sirve caliente acompañado de frijoles refritos y arroz blanco."
+            "Preheat the oven to 180°C (350°F). Grease a large baking dish.",
+            "Sauté the onion until translucent. Add the shredded chicken.",
+            "Mix the cream with the blended poblano peppers to make the green sauce.",
+            "Pass the tortillas through hot oil to soften them without browning.",
+            "Fill each tortilla with chicken, roll them up and place them in the baking dish.",
+            "Cover with the cream sauce and sprinkle with abundant grated cheese.",
+            "Bake for 25-30 minutes until the cheese is golden and bubbly.",
+            "Serve hot with refried beans and white rice."
         ]
     },
     {
         id: 2,
         name: "Fettuccine Alfredo",
         image: "public/Fettuccine_Alfredo.jpg",
+        video: "public/Cómo Hacer un Buen Espagueti Alfredo.webm",
         ingredients: [
-            "400g de pasta fettuccine",
-            "200g de mantequilla sin sal",
-            "300ml de crema para batir",
-            "150g de queso parmesano rallado",
-            "2 dientes de ajo picados",
-            "Sal y pimienta negra al gusto"
+            "400g fettuccine pasta",
+            "200g unsalted butter",
+            "300ml heavy cream",
+            "150g grated Parmesan cheese",
+            "2 cloves garlic, minced",
+            "Salt and black pepper to taste"
         ],
         steps: [
-            "Hierve agua con sal abundante en una olla grande.",
-            "Cocina el fettuccine según las instrucciones del paquete hasta que esté al dente.",
-            "Mientras tanto, derrite la mantequilla en una sartén grande a fuego medio.",
-            "Agrega el ajo picado y sofríe durante 1 minuto sin que se dore.",
-            "Incorpora la crema y deja que hierva suavemente durante 3-4 minutos.",
-            "Escurre la pasta y agrégala a la sartén con la salsa.",
-            "Añade el queso parmesano y mezcla bien hasta que se derrita completamente.",
-            "Sirve inmediatamente con más queso parmesano y pimienta negra recién molida."
+            "Boil abundant salted water in a large pot.",
+            "Cook the fettuccine according to package instructions until al dente.",
+            "Meanwhile, melt the butter in a large skillet over medium heat.",
+            "Add the minced garlic and sauté for 1 minute without browning.",
+            "Add the cream and let it simmer gently for 3-4 minutes.",
+            "Drain the pasta and add it to the skillet with the sauce.",
+            "Add the Parmesan cheese and mix well until completely melted.",
+            "Serve immediately with more Parmesan cheese and freshly ground black pepper."
         ]
     },
     {
         id: 3,
-        name: "Tacos de Pollo",
+        name: "Tacos",
         image: "public/Tacos_de_Pollo.jpg",
+        video: "public/TACOS DE POLLO faciles - comidas rapidas de hacer.webm",
         ingredients: [
-            "600g de pechuga de pollo en tiras",
-            "12 tortillas de maíz pequeñas",
-            "1 cebolla morada fileteada",
-            "2 tomates grandes picados",
-            "Cilantro fresco al gusto",
-            "Jugo de 2 limones"
+            "600g chicken breast strips",
+            "12 small corn tortillas",
+            "1 red onion, sliced",
+            "2 large tomatoes, diced",
+            "Fresh cilantro to taste",
+            "Juice of 2 limes"
         ],
         steps: [
-            "Sazona las tiras de pollo con sal, pimienta, comino y paprika al gusto.",
-            "Calienta aceite en una sartén grande a fuego alto.",
-            "Cocina el pollo durante 6-8 minutos hasta que esté bien dorado y cocido.",
-            "Calienta las tortillas en un comal o sartén por ambos lados.",
-            "Pica finamente el cilantro y mezcla con la cebolla morada.",
-            "Coloca el pollo sobre las tortillas calientes.",
-            "Agrega cebolla, tomate y cilantro al gusto sobre cada taco.",
-            "Exprime limón fresco sobre los tacos y sirve inmediatamente con salsa."
+            "Season the chicken strips with salt, pepper, cumin and paprika to taste.",
+            "Heat oil in a large skillet over high heat.",
+            "Cook the chicken for 6-8 minutes until well browned and cooked through.",
+            "Heat the tortillas on a griddle or skillet on both sides.",
+            "Finely chop the cilantro and mix with the red onion.",
+            "Place the chicken on the hot tortillas.",
+            "Add onion, tomato and cilantro to taste on each taco.",
+            "Squeeze fresh lime over the tacos and serve immediately with salsa."
         ]
     },
     {
         id: 4,
-        name: "Smoothie de Mango",
+        name: "Smoothie",
         image: "public/Smoothie_de_Mango.jpg",
+        video: "public/Mango Smoothie： 4 INGREDIENTS ｜ The Recipe Rebel.webm",
         ingredients: [
-            "2 mangos maduros pelados y cortados",
-            "1 taza de yogurt natural",
-            "1/2 taza de leche fría",
-            "2 cucharadas de miel",
-            "1 taza de hielo picado",
-            "Menta fresca para decorar"
+            "2 ripe mangoes, peeled and cut",
+            "1 cup plain yogurt",
+            "1/2 cup cold milk",
+            "2 tablespoons honey",
+            "1 cup crushed ice",
+            "Fresh mint for garnish"
         ],
         steps: [
-            "Lava y pela los mangos, corta la pulpa en trozos grandes.",
-            "Coloca los trozos de mango en el vaso de la licuadora.",
-            "Agrega el yogurt natural, la leche y la miel.",
-            "Añade el hielo picado para lograr una consistencia fría y cremosa.",
-            "Licua a alta velocidad durante 45-60 segundos hasta obtener una mezcla suave.",
-            "Prueba y ajusta la dulzura agregando más miel si es necesario.",
-            "Sirve inmediatamente en vasos grandes y fríos.",
-            "Decora con hojas de menta fresca y disfruta de inmediato."
+            "Wash and peel the mangoes, cut the pulp into large pieces.",
+            "Place the mango pieces in the blender jar.",
+            "Add the plain yogurt, milk and honey.",
+            "Add the crushed ice to achieve a cold and creamy consistency.",
+            "Blend on high speed for 45-60 seconds until smooth.",
+            "Taste and adjust sweetness by adding more honey if needed.",
+            "Serve immediately in large, cold glasses.",
+            "Garnish with fresh mint leaves and enjoy immediately."
         ]
     },
     {
         id: 5,
-        name: "Sopa de Tomate Casera",
+        name: "Homemade Tomato Soup",
         image: "public/Sopa_de_Tomate_Casera.jpg",
+        video: "public/Tomato Soup from Fresh Tomatoes.webm",
         ingredients: [
-            "8 tomates grandes maduros",
-            "1 cebolla blanca grande",
-            "3 dientes de ajo",
-            "4 tazas de caldo de pollo",
-            "1/2 taza de crema fresca",
-            "Albahaca fresca y aceite de oliva"
+            "8 large ripe tomatoes",
+            "1 large white onion",
+            "3 cloves garlic",
+            "4 cups chicken broth",
+            "1/2 cup fresh cream",
+            "Fresh basil and olive oil"
         ],
         steps: [
-            "Haz un corte en cruz en la base de cada tomate y escalda en agua hirviendo 30 segundos.",
-            "Retira la piel de los tomates y córtalos en cuartos, desechando las semillas.",
-            "Sofríe la cebolla y el ajo picados en aceite de oliva hasta que estén suaves.",
-            "Agrega los tomates y cocina durante 10 minutos hasta que se ablanden.",
-            "Añade el caldo de pollo y deja hervir, luego reduce a fuego lento por 20 minutos.",
-            "Licua la sopa hasta obtener una consistencia completamente suave.",
-            "Regresa al fuego, incorpora la crema y calienta sin hervir.",
-            "Sirve caliente con albahaca fresca picada y un chorrito de aceite de oliva."
+            "Make a cross cut at the base of each tomato and blanch in boiling water for 30 seconds.",
+            "Remove the skin from the tomatoes and cut them into quarters, discarding the seeds.",
+            "Sauté the chopped onion and garlic in olive oil until soft.",
+            "Add the tomatoes and cook for 10 minutes until softened.",
+            "Add the chicken broth and bring to a boil, then reduce to low heat for 20 minutes.",
+            "Blend the soup until you get a completely smooth consistency.",
+            "Return to heat, add the cream and heat without boiling.",
+            "Serve hot with chopped fresh basil and a drizzle of olive oil."
         ]
     },
     {
         id: 6,
-        name: "Pizza Margarita",
+        name: "Margherita Pizza",
         image: "public/Pizza_Margarita.jpg",
+        video: "public/How to Make Margherita Pizza at Home ｜ Gordon Ramsay.webm",
         ingredients: [
-            "1 base de masa para pizza",
-            "200g de salsa de tomate",
-            "250g de queso mozzarella fresco",
-            "Hojas de albahaca fresca",
-            "2 cucharadas de aceite de oliva",
-            "Sal y orégano al gusto"
+            "1 pizza dough base",
+            "200g tomato sauce",
+            "250g fresh mozzarella cheese",
+            "Fresh basil leaves",
+            "2 tablespoons olive oil",
+            "Salt and oregano to taste"
         ],
         steps: [
-            "Precalienta el horno a la temperatura máxima (250°C o más) durante 30 minutos.",
-            "Estira la masa sobre una superficie enharinada hasta obtener un círculo de 30cm.",
-            "Coloca la masa sobre una bandeja o piedra para pizza enharinada.",
-            "Extiende la salsa de tomate uniformemente dejando 2cm de borde.",
-            "Distribuye el queso mozzarella en trozos sobre la salsa.",
-            "Rocía con aceite de oliva y espolvorea sal y orégano.",
-            "Hornea durante 10-12 minutos hasta que el borde esté dorado y crujiente.",
-            "Retira del horno, añade albahaca fresca y sirve inmediatamente."
+            "Preheat the oven to maximum temperature (250°C or higher) for 30 minutes.",
+            "Stretch the dough on a floured surface until you get a 30cm circle.",
+            "Place the dough on a floured baking sheet or pizza stone.",
+            "Spread the tomato sauce evenly leaving a 2cm border.",
+            "Distribute the mozzarella cheese in pieces over the sauce.",
+            "Drizzle with olive oil and sprinkle with salt and oregano.",
+            "Bake for 10-12 minutes until the edge is golden and crispy.",
+            "Remove from oven, add fresh basil and serve immediately."
         ]
     },
     {
         id: 7,
         name: "Mole Poblano",
         image: "public/mole.jpg",
+        video: "public/Mole POBLANO desde CERO.webm",
         ingredients: [
-            "1kg de pollo en piezas",
-            "250g de pasta de mole poblano",
-            "3 tazas de caldo de pollo",
-            "2 cucharadas de manteca o aceite",
-            "1 tablilla de chocolate mexicano",
-            "Ajonjolí tostado para decorar"
+            "1kg chicken pieces",
+            "250g mole poblano paste",
+            "3 cups chicken broth",
+            "2 tablespoons lard or oil",
+            "1 tablet Mexican chocolate",
+            "Toasted sesame seeds for garnish"
         ],
         steps: [
-            "Cocina las piezas de pollo en agua con sal hasta que estén tiernas, aproximadamente 30-40 minutos.",
-            "Reserva 3 tazas del caldo de pollo y deshebra las piezas si lo prefieres.",
-            "En una olla grande, calienta la manteca o aceite a fuego medio.",
-            "Desmenuza la pasta de mole y fríela en el aceite caliente durante 2-3 minutos.",
-            "Incorpora gradualmente el caldo de pollo, mezclando constantemente para evitar grumos.",
-            "Añade el chocolate mexicano y deja que se derrita completamente en la salsa.",
-            "Agrega las piezas de pollo y cocina a fuego lento durante 15-20 minutos, moviendo ocasionalmente.",
-            "Sirve caliente sobre arroz blanco y espolvorea con ajonjolí tostado. Acompaña con tortillas."
+            "Cook the chicken pieces in salted water until tender, approximately 30-40 minutes.",
+            "Reserve 3 cups of the chicken broth and shred the pieces if you prefer.",
+            "In a large pot, heat the lard or oil over medium heat.",
+            "Crumble the mole paste and fry it in the hot oil for 2-3 minutes.",
+            "Gradually incorporate the chicken broth, stirring constantly to avoid lumps.",
+            "Add the Mexican chocolate and let it melt completely into the sauce.",
+            "Add the chicken pieces and cook over low heat for 15-20 minutes, stirring occasionally.",
+            "Serve hot over white rice and sprinkle with toasted sesame seeds. Accompany with tortillas."
         ]
     },
     {
         id: 8,
-        name: "Hamburguesa Clásica",
+        name: "Classic Burger",
         image: "public/Hamburguesa.jpg",
+        video: "public/Gordon Ramsay Makes the Perfect Burger ｜ Cooking With Gordon ｜ HexClad.webm",
         ingredients: [
-            "4 panes para hamburguesa con ajonjolí",
-            "600g de carne molida de res (80/20)",
-            "4 rebanadas de queso cheddar",
-            "Lechuga, tomate y cebolla morada",
-            "Pepinillos en vinagre",
-            "Salsa especial, mostaza y ketchup"
+            "4 hamburger buns with sesame seeds",
+            "600g ground beef (80/20)",
+            "4 slices cheddar cheese",
+            "Lettuce, tomato and red onion",
+            "Pickles",
+            "Special sauce, mustard and ketchup"
         ],
         steps: [
-            "Divide la carne en 4 porciones iguales y forma hamburguesas de 1.5cm de grosor.",
-            "Sazona ambos lados generosamente con sal y pimienta negra recién molida.",
-            "Calienta una plancha o sartén a fuego alto hasta que esté bien caliente.",
-            "Cocina las hamburguesas 3-4 minutos por lado para término medio, sin presionar.",
-            "Coloca una rebanada de queso sobre cada hamburguesa 1 minuto antes de retirar del fuego.",
-            "Tuesta ligeramente los panes en la plancha hasta que estén dorados.",
-            "Unta la salsa especial en la base del pan, coloca lechuga, tomate y la hamburguesa con queso.",
-            "Agrega cebolla, pepinillos, mostaza y ketchup. Cubre con la tapa del pan y sirve inmediatamente."
+            "Divide the meat into 4 equal portions and form 1.5cm thick burgers.",
+            "Season both sides generously with salt and freshly ground black pepper.",
+            "Heat a griddle or skillet over high heat until very hot.",
+            "Cook the burgers 3-4 minutes per side for medium doneness, without pressing.",
+            "Place a slice of cheese on each burger 1 minute before removing from heat.",
+            "Lightly toast the buns on the griddle until golden.",
+            "Spread special sauce on the bun base, place lettuce, tomato and the cheeseburger.",
+            "Add onion, pickles, mustard and ketchup. Cover with the bun top and serve immediately."
         ]
     }
 ];
@@ -199,6 +207,7 @@ let currentStep = 0;
 const homeScreen = document.getElementById('homeScreen');
 const detailScreen = document.getElementById('detailScreen');
 const stepsScreen = document.getElementById('stepsScreen');
+const videoScreen = document.getElementById('videoScreen');
 const recipeGrid = document.getElementById('recipeGrid');
 
 // ====================================
@@ -315,6 +324,14 @@ function openRecipeDetail(recipeId) {
         ingredientsList.appendChild(li);
     });
 
+    // Show or hide video button based on recipe
+    const videoBtn = document.getElementById('viewVideoBtn');
+    if (currentRecipe.video) {
+        videoBtn.style.display = 'block';
+    } else {
+        videoBtn.style.display = 'none';
+    }
+
     // Switch screens
     showScreen('detail');
 
@@ -347,7 +364,7 @@ function updateStepDisplay() {
     const prevBtn = document.getElementById('prevStepBtn');
     const nextBtn = document.getElementById('nextStepBtn');
 
-    stepCounter.textContent = `Paso ${currentStep + 1} de ${currentRecipe.steps.length}`;
+    stepCounter.textContent = `Step ${currentStep + 1} of ${currentRecipe.steps.length}`;
     stepText.textContent = currentRecipe.steps[currentStep];
 
     // Update button states
@@ -371,10 +388,52 @@ function prevStep() {
     }
 }
 
+function openVideoView() {
+    if (!currentRecipe || !currentRecipe.video) return;
+
+    document.getElementById('videoTitle').textContent = currentRecipe.name;
+
+    // Detect video format from file extension
+    const videoPath = currentRecipe.video;
+    const extension = videoPath.split('.').pop().toLowerCase();
+    const mimeType = extension === 'webm' ? 'video/webm' : 'video/mp4';
+
+    // Set video source with correct MIME type
+    const videoSource = document.getElementById('videoSource');
+    videoSource.src = videoPath;
+    videoSource.type = mimeType;
+
+    const videoElement = document.getElementById('recipeVideo');
+    videoElement.load(); // Reload video with new source
+
+    showScreen('video');
+
+    // Enter fullscreen automatically
+    setTimeout(() => {
+        if (videoElement.requestFullscreen) {
+            videoElement.requestFullscreen().catch(err => {
+                console.log('Could not enter fullscreen:', err);
+            });
+        } else if (videoElement.webkitRequestFullscreen) {
+            videoElement.webkitRequestFullscreen();
+        } else if (videoElement.msRequestFullscreen) {
+            videoElement.msRequestFullscreen();
+        }
+
+        // Autoplay
+        videoElement.play().catch(err => {
+            console.log('Autoplay blocked:', err);
+        });
+
+        document.getElementById('backToDetailFromVideo').focus();
+    }, 300);
+}
+
 function showScreen(screenName) {
     homeScreen.classList.remove('active');
     detailScreen.classList.remove('active');
     stepsScreen.classList.remove('active');
+    videoScreen.classList.remove('active');
 
     switch(screenName) {
         case 'home':
@@ -385,6 +444,9 @@ function showScreen(screenName) {
             break;
         case 'steps':
             stepsScreen.classList.add('active');
+            break;
+        case 'video':
+            videoScreen.classList.add('active');
             break;
     }
 }
@@ -450,6 +512,132 @@ function setupEventListeners() {
     document.getElementById('prevStepBtn').addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
             prevStep();
+        }
+    });
+
+    // View video button
+    document.getElementById('viewVideoBtn').addEventListener('click', openVideoView);
+    document.getElementById('viewVideoBtn').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            openVideoView();
+        }
+    });
+
+    // Back to detail from video
+    document.getElementById('backToDetailFromVideo').addEventListener('click', () => {
+        const videoElement = document.getElementById('recipeVideo');
+        videoElement.pause();
+        showScreen('detail');
+        setTimeout(() => {
+            document.getElementById('viewVideoBtn').focus();
+        }, 100);
+    });
+
+    document.getElementById('backToDetailFromVideo').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const videoElement = document.getElementById('recipeVideo');
+            videoElement.pause();
+            showScreen('detail');
+            setTimeout(() => {
+                document.getElementById('viewVideoBtn').focus();
+            }, 100);
+        }
+    });
+
+    // Video control buttons
+    document.getElementById('playPauseBtn').addEventListener('click', () => {
+        const video = document.getElementById('recipeVideo');
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+
+    document.getElementById('playPauseBtn').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const video = document.getElementById('recipeVideo');
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    });
+
+    document.getElementById('rewindBtn').addEventListener('click', () => {
+        const video = document.getElementById('recipeVideo');
+        video.currentTime = Math.max(0, video.currentTime - 10);
+    });
+
+    document.getElementById('rewindBtn').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const video = document.getElementById('recipeVideo');
+            video.currentTime = Math.max(0, video.currentTime - 10);
+        }
+    });
+
+    document.getElementById('forwardBtn').addEventListener('click', () => {
+        const video = document.getElementById('recipeVideo');
+        video.currentTime = Math.min(video.duration, video.currentTime + 10);
+    });
+
+    document.getElementById('forwardBtn').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const video = document.getElementById('recipeVideo');
+            video.currentTime = Math.min(video.duration, video.currentTime + 10);
+        }
+    });
+
+    // Listener para cuando se sale de pantalla completa
+    document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement && videoScreen.classList.contains('active')) {
+            // Si salió de fullscreen y está en video screen, regresar a detail
+            const videoElement = document.getElementById('recipeVideo');
+            videoElement.pause();
+            showScreen('detail');
+            setTimeout(() => {
+                document.getElementById('viewVideoBtn').focus();
+            }, 100);
+        }
+    });
+
+    // También para webkit (Safari)
+    document.addEventListener('webkitfullscreenchange', () => {
+        if (!document.webkitFullscreenElement && videoScreen.classList.contains('active')) {
+            const videoElement = document.getElementById('recipeVideo');
+            videoElement.pause();
+            showScreen('detail');
+            setTimeout(() => {
+                document.getElementById('viewVideoBtn').focus();
+            }, 100);
+        }
+    });
+
+    // Atajos de teclado adicionales para el video
+    document.getElementById('recipeVideo').addEventListener('keydown', (e) => {
+        const video = document.getElementById('recipeVideo');
+        switch(e.key) {
+            case ' ':
+            case 'Enter':
+                e.preventDefault();
+                if (video.paused) video.play();
+                else video.pause();
+                break;
+            case 'ArrowLeft':
+                e.preventDefault();
+                video.currentTime = Math.max(0, video.currentTime - 10);
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                video.currentTime = Math.min(video.duration, video.currentTime + 10);
+                break;
+            case 'Escape':
+                e.preventDefault();
+                if (document.fullscreenElement) {
+                    document.exitFullscreen();
+                }
+                break;
         }
     });
 }
@@ -661,6 +849,7 @@ function getActiveScreen() {
     if (homeScreen.classList.contains('active')) return homeScreen;
     if (detailScreen.classList.contains('active')) return detailScreen;
     if (stepsScreen.classList.contains('active')) return stepsScreen;
+    if (videoScreen.classList.contains('active')) return videoScreen;
     return homeScreen;
 }
 
@@ -768,7 +957,10 @@ function setupKeyboardNavigation() {
 }
 
 function handleBackButton(e) {
-    if (stepsScreen.classList.contains('active')) {
+    if (videoScreen.classList.contains('active')) {
+        e.preventDefault();
+        document.getElementById('backToDetailFromVideo').click();
+    } else if (stepsScreen.classList.contains('active')) {
         e.preventDefault();
         document.getElementById('backToDetail').click();
     } else if (detailScreen.classList.contains('active')) {

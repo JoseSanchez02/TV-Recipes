@@ -12,7 +12,7 @@
     <!-- Home Screen -->
     <div id="homeScreen" class="screen active" data-nav-scope="home">
         <header>
-            <h1>Easy Recipes</h1>
+            <h1>Today’s Featured Dishes</h1>
             <p class="subtitle">What are we going to cook today?</p>
         </header>
 
@@ -25,7 +25,7 @@
     <div id="detailScreen" class="screen" data-nav-scope="detail">
         <div class="detail-container">
             <button class="back-button focusable" id="backToHome" data-nav="detail-nav" data-nav-order="1">
-                ← Volver
+                ← Back
             </button>
 
             <div class="detail-content">
@@ -37,12 +37,49 @@
                     <h2 id="detailTitle"></h2>
 
                     <div class="ingredients-section">
-                        <h3>Ingredientes:</h3>
+                        <h3>Ingredients:</h3>
                         <ul id="detailIngredients"></ul>
                     </div>
 
-                    <button class="view-steps-button focusable" id="viewStepsBtn" data-nav="detail-nav" data-nav-order="2">
-                        Ver Pasos →
+                    <div class="detail-buttons">
+                        <button class="view-steps-button focusable" id="viewStepsBtn" data-nav="detail-nav" data-nav-order="2">
+                            View Steps →
+                        </button>
+                        <button class="view-video-button focusable" id="viewVideoBtn" data-nav="detail-nav" data-nav-order="3" style="display: none;">
+                            🎥 Watch Video
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Screen -->
+    <div id="videoScreen" class="screen" data-nav-scope="video">
+        <div class="video-container">
+            <button class="back-button focusable" id="backToDetailFromVideo" data-nav="video-nav" data-nav-order="1">
+                ← Back to Recipe
+            </button>
+
+            <div class="video-content">
+                <h2 id="videoTitle"></h2>
+
+                <div class="video-player-container">
+                    <video id="recipeVideo" class="recipe-video" controls>
+                        <source id="videoSource" src="" type="">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+
+                <div class="video-controls">
+                    <button class="video-control-button focusable" id="playPauseBtn" data-nav="video-nav" data-nav-order="2">
+                        ▶️ Play / Pause
+                    </button>
+                    <button class="video-control-button focusable" id="rewindBtn" data-nav="video-nav" data-nav-order="3">
+                        ⏪ -10s
+                    </button>
+                    <button class="video-control-button focusable" id="forwardBtn" data-nav="video-nav" data-nav-order="4">
+                        ⏩ +10s
                     </button>
                 </div>
             </div>
@@ -53,7 +90,7 @@
     <div id="stepsScreen" class="screen" data-nav-scope="steps">
         <div class="steps-container">
             <button class="back-button focusable" id="backToDetail" data-nav="steps-nav" data-nav-order="1">
-                ← Volver a Receta
+                ← Back to Recipe
             </button>
 
             <div class="steps-content">
@@ -66,10 +103,10 @@
 
                 <div class="steps-navigation" data-nav-group="step-controls" role="navigation">
                     <button class="nav-button focusable" id="prevStepBtn" data-nav="steps-nav" data-nav-order="2">
-                        ← Anterior
+                        ← Previous
                     </button>
                     <button class="nav-button focusable" id="nextStepBtn" data-nav="steps-nav" data-nav-order="3">
-                        Siguiente →
+                        Next →
                     </button>
                 </div>
             </div>

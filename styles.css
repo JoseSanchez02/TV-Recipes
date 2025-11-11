@@ -206,7 +206,7 @@ header h1 {
 }
 
 .ingredients-section {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .ingredients-section h3 {
@@ -237,20 +237,50 @@ header h1 {
     font-size: 32px;
 }
 
+.detail-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .view-steps-button {
     background: linear-gradient(135deg, #ff6b6b, #ee5a24);
     border: 3px solid transparent;
     color: #ffffff;
-    font-size: 36px;
-    padding: 25px 60px;
+    font-size: 32px;
+    padding: 20px 50px;
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: bold;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    min-width: 200px;
 }
 
 .view-steps-button:focus {
+    outline: none;
+    border-color: #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.08);
+}
+
+.view-video-button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: 3px solid transparent;
+    color: #ffffff;
+    font-size: 32px;
+    padding: 20px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    min-width: 200px;
+}
+
+.view-video-button:focus {
     outline: none;
     border-color: #ffd700;
     box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -339,6 +369,75 @@ header h1 {
     transform: scale(1);
     box-shadow: none;
     border-color: transparent;
+}
+
+/* ====================================
+   Video Screen
+   ==================================== */
+
+.video-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.video-content {
+    text-align: center;
+}
+
+.video-content h2 {
+    font-size: 52px;
+    margin-bottom: 40px;
+    color: #ffd700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.video-player-container {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-video {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 15px;
+    outline: none;
+}
+
+.recipe-video:focus {
+    outline: 4px solid #ffd700;
+    outline-offset: 4px;
+}
+
+.video-controls {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.video-control-button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid transparent;
+    color: #ffffff;
+    font-size: 28px;
+    padding: 18px 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    min-width: 180px;
+}
+
+.video-control-button:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #ffd700;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+    transform: scale(1.08);
 }
 
 /* ====================================

@@ -37,7 +37,7 @@ A fully functional Smart TV recipe application built with HTML, CSS, and JavaScr
 ## 📱 Screens
 
 ### Home Screen
-- Title: "Recetas para Smart TV"
+- Title: "Easy Recipes for Smart TV"
 - Grid of 8 recipe cards with images and names
 - D-Pad navigation between cards
 
@@ -45,20 +45,27 @@ A fully functional Smart TV recipe application built with HTML, CSS, and JavaScr
 - Large recipe image
 - Recipe title
 - Ingredients list (4-6 items with checkmarks)
-- "Ver Pasos" button to view cooking steps
+- "View Steps" button to view cooking instructions
+- "View Video" button (available for Enchiladas Suizas)
 - Back button to return to home
 
 ### Steps Screen
 - One cooking step displayed at a time
 - Large, easy-to-read text
-- Step counter (e.g., "Paso 1 de 8")
+- Step counter (e.g., "Step 1 of 8")
 - Previous/Next buttons
 - Arrow key support for step navigation
 - Back button to return to recipe detail
 
+### Video Screen (NEW!)
+- Full-screen video player
+- Automatic fullscreen mode
+- Custom playback controls
+- D-Pad navigation support
+
 ## 🍳 Included Recipes
 
-1. **Enchiladas Suizas** - Traditional Mexican dish with green cream sauce
+1. **Enchiladas Suizas** - Traditional Mexican dish with green cream sauce (with video!)
 2. **Fettuccine Alfredo** - Classic Italian pasta with creamy sauce
 3. **Tacos de Pollo** - Mexican chicken tacos
 4. **Smoothie de Mango** - Refreshing mango smoothie
