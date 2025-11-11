@@ -1,0 +1,76 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build outputs
+dist/
+build/
+*.wgt
+*.ipk
+
+# Environment
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# Documentation innecesaria (mantener solo README.md)
+ACTUALIZACION_IMAGENES.md
+FIX_ENCHILADAS_IMAGE.md
+IMPLEMENTACION_COMPLETA.md
+NUEVAS_RECETAS_AGREGADAS.md
+SPATIAL_NAVIGATION_IMPLEMENTATION.md
+CORRECCIONES_DISENO.md
+PROJECT_SUMMARY.txt
+
+# Videos
+*.mp4
+*.mov
+*.avi
+
+# Test files (opcional, descomenta si no quieres subirlos)
+# test_images.html
+# test_spatial_navigation.html
+{
+    "id": "com.yourdomain.tvrecipes",
+    "version": "1.0.0",
+    "vendor": "Your Name",
+    "type": "web",
+    "main": "index.html",
+    "title": "TV Recipes",
+    "subtitle": "Recetas para Smart TV",
+    "icon": "icon.png",
+    "largeIcon": "icon_large.png",
+    "bgImage": "bg.png",
+    "iconColor": "#FFD700",
+    "resolution": "1920x1080",
+    "disableBackHistoryAPI": false,
+    "transparent": false,
+    "accessibility": {
+        "supportsAudioGuidance": false
+    },
+    "requiredPermissions": [
+        "internet"
+    ]
+}
+

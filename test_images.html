@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .image-container {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        img {
+            width: 300px;
+            height: 225px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        h3 {
+            margin-top: 10px;
+            color: #333;
+        }
+        .status {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Verificación de Imágenes de Recetas</h1>
+    <p>Prueba visual de todas las imágenes en la carpeta public/</p>
+
+    <div class="image-container">
+        <img src="public/enchiladas-suizas-receta-sanborns.webp" alt="Enchiladas Suizas" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Enchiladas Suizas</h3>
+        <div class="status">Cargando...</div>
+    </div>
+
+    <div class="image-container">
+        <img src="public/Fettuccine_Alfredo.jpg" alt="Fettuccine Alfredo" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Fettuccine Alfredo</h3>
+        <div class="status">Cargando...</div>
+    </div>
+
+    <div class="image-container">
+        <img src="public/Tacos_de_Pollo.jpg" alt="Tacos de Pollo" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Tacos de Pollo</h3>
+        <div class="status">Cargando...</div>
+    </div>
+
+    <div class="image-container">
+        <img src="public/Smoothie_de_Mango.jpg" alt="Smoothie de Mango" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Smoothie de Mango</h3>
+        <div class="status">Cargando...</div>
+    </div>
+
+    <div class="image-container">
+        <img src="public/Sopa_de_Tomate_Casera.jpg" alt="Sopa de Tomate Casera" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Sopa de Tomate Casera</h3>
+        <div class="status">Cargando...</div>
+    </div>
+
+    <div class="image-container">
+        <img src="public/Pizza_Margarita.jpg" alt="Pizza Margarita" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Pizza Margarita</h3>
+        <div class="status">Cargando...</div>
+    </div>
+
+    <div class="image-container">
+        <img src="public/mole.jpg" alt="Mole Poblano" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Mole Poblano</h3>
+        <div class="status">Cargando...</div>
+    </div>
+
+    <div class="image-container">
+        <img src="public/Hamburguesa.jpg" alt="Hamburguesa Clásica" onerror="this.parentElement.querySelector('.status').innerHTML='❌ Error al cargar'; this.parentElement.querySelector('.status').className='status error';" onload="this.parentElement.querySelector('.status').innerHTML='✅ Cargada correctamente'; this.parentElement.querySelector('.status').className='status success';">
+        <h3>Hamburguesa Clásica</h3>
+        <div class="status">Cargando...</div>
+    </div>
+</body>
+</html>
+

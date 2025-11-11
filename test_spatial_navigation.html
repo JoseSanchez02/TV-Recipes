@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="spatial-navigation" content="enabled">
+    <title>Prueba de Navegación Espacial - TV Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .instructions h2 {
+            color: #ffa500;
+            margin-bottom: 15px;
+        }
+
+        .instructions ul {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .instructions li {
+            padding: 8px 0;
+            font-size: 20px;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        .test-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 4px solid transparent;
+            color: white;
+            padding: 40px;
+            font-size: 24px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .test-button:focus {
+            outline: none;
+            border-color: #ffd700;
+            background: rgba(255, 215, 0, 0.3);
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+        }
+
+        .test-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .test-button.clicked {
+            background: rgba(76, 175, 80, 0.5);
+            border-color: #4caf50;
+        }
+
+        .status {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+
+        .status-item {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .success { color: #4caf50; }
+        .warning { color: #ffa500; }
+        .info { color: #2196f3; }
+
+        #console-log {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        #console-log div {
+            padding: 3px 0;
+        }
+    </style>
+</head>
+<body data-spatial-navigation="true">
+    <h1>🧪 Prueba de Navegación Espacial</h1>
+
+    <div class="instructions">
+        <h2>Instrucciones</h2>
+        <ul>
+            <li>🎮 Usa las teclas de <strong>FLECHA</strong> para navegar</li>
+            <li>⬆️⬇️⬅️➡️ Las flechas deben mover el focus</li>
+            <li>⏎ Presiona <strong>ENTER</strong> para activar un botón</li>
+            <li>✨ El botón enfocado debe tener un borde <strong>DORADO</strong></li>
+            <li>✅ Los botones activados cambiarán a <strong>VERDE</strong></li>
+        </ul>
+    </div>
+
+    <div class="test-grid" id="testGrid">
+        <button class="test-button" tabindex="0">Botón 1</button>
+        <button class="test-button" tabindex="0">Botón 2</button>
+        <button class="test-button" tabindex="0">Botón 3</button>
+        <button class="test-button" tabindex="0">Botón 4</button>
+        <button class="test-button" tabindex="0">Botón 5</button>
+        <button class="test-button" tabindex="0">Botón 6</button>
+        <button class="test-button" tabindex="0">Botón 7</button>
+        <button class="test-button" tabindex="0">Botón 8</button>
+        <button class="test-button" tabindex="0">Botón 9</button>
+    </div>
+
+    <div class="status">
+        <h3>📊 Estado de la Navegación</h3>
+        <div class="status-item">
+            <strong>Último Focus:</strong> <span id="lastFocus" class="info">Ninguno</span>
+        </div>
+        <div class="status-item">
+            <strong>Última Dirección:</strong> <span id="lastDirection" class="info">Ninguna</span>
+        </div>
+        <div class="status-item">
+            <strong>Botones Activados:</strong> <span id="clickCount" class="success">0</span>
+        </div>
+        <div class="status-item">
+            <strong>API Detectada:</strong> <span id="apiStatus" class="warning">Verificando...</span>
+        </div>
+
+        <div id="console-log">
+            <strong>📝 Console Log:</strong>
+        </div>
+    </div>
+
+    <script>
+        // Console log display
+        const consoleLog = document.getElementById('console-log');
+        const originalLog = console.log;
+        console.log = function(...args) {
+            originalLog.apply(console, args);
+            const logEntry = document.createElement('div');
+            logEntry.textContent = args.join(' ');
+            consoleLog.appendChild(logEntry);
+            consoleLog.scrollTop = consoleLog.scrollHeight;
+        };
+
+        // Test variables
+        let clickCount = 0;
+        let lastDirection = 'none';
+
+        // Check for Spatial Navigation API
+        window.addEventListener('load', () => {
+            const apiStatus = document.getElementById('apiStatus');
+
+            if ('spatialNavigationEnabled' in document) {
+                apiStatus.textContent = '✅ Native W3C API Detected';
+                apiStatus.className = 'success';
+                console.log('✅ Native Spatial Navigation API available');
+            } else if (typeof window.navigate === 'function') {
+                apiStatus.textContent = '✅ Polyfill API Detected';
+                apiStatus.className = 'success';
+                console.log('✅ Spatial Navigation Polyfill loaded');
+            } else {
+                apiStatus.textContent = '⚠️ Using Custom Implementation';
+                apiStatus.className = 'warning';
+                console.log('⚠️ No native API, using fallback');
+            }
+
+            // Set initial focus
+            setTimeout(() => {
+                const firstButton = document.querySelector('.test-button');
+                firstButton.focus();
+                console.log('🎯 Initial focus set on Button 1');
+            }, 100);
+        });
+
+        // Track button clicks
+        const buttons = document.querySelectorAll('.test-button');
+        buttons.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                btn.classList.add('clicked');
+                clickCount++;
+                document.getElementById('clickCount').textContent = clickCount;
+                console.log(`✅ Button ${index + 1} clicked! Total: ${clickCount}`);
+            });
+
+            btn.addEventListener('focus', () => {
+                document.getElementById('lastFocus').textContent = btn.textContent;
+                console.log(`🎯 Focus on: ${btn.textContent}`);
+            });
+        });
+
+        // Track arrow key navigation
+        document.addEventListener('keydown', (e) => {
+            const directions = {
+                'ArrowUp': '⬆️ UP',
+                'ArrowDown': '⬇️ DOWN',
+                'ArrowLeft': '⬅️ LEFT',
+                'ArrowRight': '➡️ RIGHT',
+                'Enter': '⏎ ENTER'
+            };
+
+            if (directions[e.key]) {
+                lastDirection = directions[e.key];
+                document.getElementById('lastDirection').textContent = lastDirection;
+                console.log(`🎮 Key pressed: ${lastDirection}`);
+            }
+        });
+
+        // Spatial navigation implementation (same as app.js)
+        const keyMap = {
+            'ArrowUp': 'up',
+            'ArrowDown': 'down',
+            'ArrowLeft': 'left',
+            'ArrowRight': 'right'
+        };
+
+        document.addEventListener('keydown', (e) => {
+            const direction = keyMap[e.key];
+
+            if (direction) {
+                e.preventDefault();
+                navigateInDirection(direction);
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                document.activeElement.click();
+            }
+        });
+
+        function navigateInDirection(direction) {
+            const currentFocus = document.activeElement;
+            const focusableElements = Array.from(document.querySelectorAll('.test-button'));
+
+            const nextElement = findBestCandidate(currentFocus, focusableElements, direction);
+
+            if (nextElement) {
+                nextElement.focus();
+            }
+        }
+
+        function findBestCandidate(origin, candidates, direction) {
+            if (!origin || !origin.getBoundingClientRect) {
+                return candidates[0];
+            }
+
+            const originRect = origin.getBoundingClientRect();
+            let bestCandidate = null;
+            let bestDistance = Infinity;
+
+            candidates.forEach(candidate => {
+                if (candidate === origin) return;
+
+                const candidateRect = candidate.getBoundingClientRect();
+
+                if (!isInDirection(originRect, candidateRect, direction)) return;
+
+                const distance = calculateDistance(originRect, candidateRect);
+                const alignment = calculateAlignment(originRect, candidateRect, direction);
+                const weightedDistance = distance - (alignment * 100);
+
+                if (weightedDistance < bestDistance) {
+                    bestDistance = weightedDistance;
+                    bestCandidate = candidate;
+                }
+            });
+
+            return bestCandidate;
+        }
+
+        function isInDirection(originRect, targetRect, direction) {
+            const originCenterX = originRect.left + originRect.width / 2;
+            const originCenterY = originRect.top + originRect.height / 2;
+            const targetCenterX = targetRect.left + targetRect.width / 2;
+            const targetCenterY = targetRect.top + targetRect.height / 2;
+
+            switch (direction) {
+                case 'up': return targetCenterY < originCenterY;
+                case 'down': return targetCenterY > originCenterY;
+                case 'left': return targetCenterX < originCenterX;
+                case 'right': return targetCenterX > originCenterX;
+                default: return false;
+            }
+        }
+
+        function calculateDistance(rect1, rect2) {
+            const center1X = rect1.left + rect1.width / 2;
+            const center1Y = rect1.top + rect1.height / 2;
+            const center2X = rect2.left + rect2.width / 2;
+            const center2Y = rect2.top + rect2.height / 2;
+
+            const dx = center2X - center1X;
+            const dy = center2Y - center1Y;
+
+            return Math.sqrt(dx * dx + dy * dy);
+        }
+
+        function calculateAlignment(rect1, rect2, direction) {
+            const center1X = rect1.left + rect1.width / 2;
+            const center1Y = rect1.top + rect1.height / 2;
+            const center2X = rect2.left + rect2.width / 2;
+            const center2Y = rect2.top + rect2.height / 2;
+
+            if (direction === 'up' || direction === 'down') {
+                const horizontalDiff = Math.abs(center2X - center1X);
+                return 1 / (1 + horizontalDiff);
+            } else {
+                const verticalDiff = Math.abs(center2Y - center1Y);
+                return 1 / (1 + verticalDiff);
+            }
+        }
+
+        console.log('🚀 Spatial Navigation Test Page Loaded');
+        console.log('📝 Use arrow keys to navigate between buttons');
+    </script>
+</body>
+</html>
+

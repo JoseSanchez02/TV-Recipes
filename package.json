@@ -1,0 +1,24 @@
+{
+  "name": "TV Recipes",
+  "version": "1.0.0",
+  "description": "Smart TV Recipe Application with D-Pad Navigation",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "smart-tv",
+    "recipes",
+    "tizen",
+    "webos",
+    "spatial-navigation",
+    "dpad"
+  ],
+  "author": "Pplon",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
+

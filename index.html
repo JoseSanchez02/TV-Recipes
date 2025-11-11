@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Recipes - Recetas para Smart TV</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- W3C Spatial Navigation meta tag -->
+    <meta name="spatial-navigation" content="enabled">
+</head>
+<body data-spatial-navigation="true">
+    <!-- Home Screen -->
+    <div id="homeScreen" class="screen active" data-nav-scope="home">
+        <header>
+            <h1>Easy Recipes</h1>
+            <p class="subtitle">What are we going to cook today?</p>
+        </header>
+
+        <main class="recipe-grid" id="recipeGrid" data-nav-group="recipes" role="grid">
+            <!-- Recipe cards will be dynamically generated -->
+        </main>
+    </div>
+
+    <!-- Recipe Detail Screen -->
+    <div id="detailScreen" class="screen" data-nav-scope="detail">
+        <div class="detail-container">
+            <button class="back-button focusable" id="backToHome" data-nav="detail-nav" data-nav-order="1">
+                ← Volver
+            </button>
+
+            <div class="detail-content">
+                <div class="detail-image-container">
+                    <img id="detailImage" src="" alt="" class="detail-image">
+                </div>
+
+                <div class="detail-info">
+                    <h2 id="detailTitle"></h2>
+
+                    <div class="ingredients-section">
+                        <h3>Ingredientes:</h3>
+                        <ul id="detailIngredients"></ul>
+                    </div>
+
+                    <button class="view-steps-button focusable" id="viewStepsBtn" data-nav="detail-nav" data-nav-order="2">
+                        Ver Pasos →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Steps Screen -->
+    <div id="stepsScreen" class="screen" data-nav-scope="steps">
+        <div class="steps-container">
+            <button class="back-button focusable" id="backToDetail" data-nav="steps-nav" data-nav-order="1">
+                ← Volver a Receta
+            </button>
+
+            <div class="steps-content">
+                <h2 id="stepsTitle"></h2>
+
+                <div class="step-display">
+                    <div class="step-counter" id="stepCounter"></div>
+                    <p class="step-text" id="stepText"></p>
+                </div>
+
+                <div class="steps-navigation" data-nav-group="step-controls" role="navigation">
+                    <button class="nav-button focusable" id="prevStepBtn" data-nav="steps-nav" data-nav-order="2">
+                        ← Anterior
+                    </button>
+                    <button class="nav-button focusable" id="nextStepBtn" data-nav="steps-nav" data-nav-order="3">
+                        Siguiente →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spatial Navigation Polyfill -->
+    <script src="https://cdn.jsdelivr.net/npm/spatial-navigation-polyfill@1.3.1/dist/spatial-navigation-polyfill.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
