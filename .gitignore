@@ -34,11 +34,11 @@ logs/
 tmp/
 temp/
 
-# Videos (archivos grandes)
+# Videos (large files - MP4 excluded, WebM allowed for GitHub)
 *.mp4
 *.mov
 *.avi
-*.webm
+# *.webm  # Commented to allow WebM uploads
 
 # Documentation files (keep only README.md and QUICKSTART.md)
 ACTUALIZACION_IMAGENES.md
